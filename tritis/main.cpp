@@ -9,6 +9,7 @@
 #include <iostream>
 #include <vector>
 #include <time.h>
+#include <termios.h>
 
 using namespace std;
 
@@ -42,12 +43,29 @@ public:
 int main (int argc, const char * argv[])
 {
     srand((unsigned int)time(NULL));
+    int input;
+    char c;
     tetrisGame *game=new tetrisGame;
     game->reset();
+    struct termios t;
+    tcgetattr(STDIN_FILENO, &t);
+    t.c_lflag &= ~ICANON;
+    tcsetattr(STDIN_FILENO, TCSANOW, &t);
+    
+    // Once the buffering is turned off, the rest is simple.
     do{
         game->showMap();
         cout<<"------"<<endl;
-    }while(game->makeUpdate(rand()&3));
+        cout<<"a< >d s| w@"<<endl;
+        c = cin.get();
+        cout<<endl;
+        switch(c){
+            case 'a':input=1; break;
+            case 'd':input=2; break;
+            case 's':input=0; break;
+            default:input=3;break;
+        }
+    }while(game->makeUpdate(input));
     game->showMap();
     cout<<"-GAME-OVER-"<<endl;
     
@@ -199,6 +217,7 @@ bool tetrisGame::makeUpdate(int action){
             cont=false;
         }
         nextTile=rand()&1;
+        mainCounter=0;
     }
     return cont;
 }
