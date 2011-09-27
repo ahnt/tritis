@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8423CC69142BA5E900BBA2F0 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8423CC68142BA5E900BBA2F0 /* main.cpp */; };
 		8423CC6B142BA5E900BBA2F0 /* tritis.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8423CC6A142BA5E900BBA2F0 /* tritis.1 */; };
+		8423CC761431FEB200BBA2F0 /* game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8423CC751431FEB200BBA2F0 /* game.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +29,9 @@
 		8423CC64142BA5E900BBA2F0 /* tritis */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = tritis; sourceTree = BUILT_PRODUCTS_DIR; };
 		8423CC68142BA5E900BBA2F0 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		8423CC6A142BA5E900BBA2F0 /* tritis.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = tritis.1; sourceTree = "<group>"; };
+		8423CC751431FEB200BBA2F0 /* game.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = game.cpp; sourceTree = "<group>"; };
+		8423CC781431FEBD00BBA2F0 /* game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = game.h; sourceTree = "<group>"; };
+		8423CC7B143213D300BBA2F0 /* visualizer.pde */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = visualizer.pde; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.java; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +49,7 @@
 			isa = PBXGroup;
 			children = (
 				8423CC67142BA5E900BBA2F0 /* tritis */,
+				8423CC79143213D300BBA2F0 /* processing */,
 				8423CC65142BA5E900BBA2F0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -62,8 +67,26 @@
 			children = (
 				8423CC68142BA5E900BBA2F0 /* main.cpp */,
 				8423CC6A142BA5E900BBA2F0 /* tritis.1 */,
+				8423CC781431FEBD00BBA2F0 /* game.h */,
+				8423CC751431FEB200BBA2F0 /* game.cpp */,
 			);
 			path = tritis;
+			sourceTree = "<group>";
+		};
+		8423CC79143213D300BBA2F0 /* processing */ = {
+			isa = PBXGroup;
+			children = (
+				8423CC7A143213D300BBA2F0 /* visualizer */,
+			);
+			path = processing;
+			sourceTree = "<group>";
+		};
+		8423CC7A143213D300BBA2F0 /* visualizer */ = {
+			isa = PBXGroup;
+			children = (
+				8423CC7B143213D300BBA2F0 /* visualizer.pde */,
+			);
+			path = visualizer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -114,6 +137,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8423CC69142BA5E900BBA2F0 /* main.cpp in Sources */,
+				8423CC761431FEB200BBA2F0 /* game.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,6 +222,7 @@
 				8423CC70142BA5E900BBA2F0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
